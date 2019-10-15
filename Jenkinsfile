@@ -31,8 +31,9 @@ pipeline {
             success{
               echo 'Thanks! Code deployed to production'
             }
+
             failure{
-              echo 'SHIT ! Cancelled deployment'
+              echo 'SHIT ! Failed deployment'
             }
           }
         }
