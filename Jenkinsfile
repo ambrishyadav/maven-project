@@ -14,18 +14,13 @@ pipeline {
           }
         }
       }
-/**
-      stage('Build'){
-        steps {
-          echo "Building . . ."
+
+      stage ('Deploy to Staging'){
+        steps{
+          build job: 'deploy-to-staging'
+          echo "Code deployed to staging . . ."
         }
       }
 
-      stage ('Deploy'){
-        steps{
-          echo "Code deployed . . ."
-        }
-      }
-**/
     }
 }
