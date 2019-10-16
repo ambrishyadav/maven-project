@@ -28,6 +28,7 @@ pipeline {
             input message:'Approve PRODUCTION deployment?'
           }
           build job: 'deploy-to-prod'
+        }
         post {
             success {
               echo 'Thanks! Code deployed to production'
@@ -39,6 +40,4 @@ pipeline {
           }
         }
       }
-
     }
-}
