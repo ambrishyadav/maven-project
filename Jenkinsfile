@@ -1,11 +1,16 @@
 pipeline {
   agent any
+
+  tools{
+    maven 'Maven3.6.2'
+  }
     stages {
 
       stage('Build'){
         steps {
           echo "Building . . ."
-          sh '/Users/Shared/apache-maven-3.6.2/bin/mvn clean package'
+          /**sh '/Users/Shared/apache-maven-3.6.2/bin/mvn clean package'**/
+          sh 'mvn clean package'
         }
         post {
           success {
