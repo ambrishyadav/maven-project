@@ -10,6 +10,7 @@ pipeline {
         steps {
           echo "Building . . ."
           /**sh '/Users/Shared/apache-maven-3.6.2/bin/mvn clean package'**/
+          /** test comment **/
           sh 'mvn clean package'
         }
         post {
